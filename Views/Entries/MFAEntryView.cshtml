@@ -1,0 +1,37 @@
+﻿@model Mobile_CMS.Models.MFAModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing MFA Entry";
+}
+
+<div>
+    <h2>MFA</h2>
+    <div>
+        <label>Last Name</label>
+        <input id="mfaLastName" type="text" readonly />
+    </div>
+    <div>
+        <label>First Name</label>
+        <input id="mfaFirstName" type="text" readonly />
+    </div>
+    <div>
+        <label>Donor ID</label>
+        <input id="mfaDonorID" type="text" readonly />
+    </div>
+    <div>
+        <label>Email</label>
+        <input id="mfaEmail" type="text" readonly />
+    </div>
+    <div>
+        <label>Phone</label>
+        <input id="mfaPhone" type="text" readonly />
+    </div>
+    <div>
+        <input type="checkbox" id="mfaEnabled" />
+        <label for="mfaEnabled">MFA Enabled</label>
+    </div>
+    <div>
+        <button onclick="UpdateMFA()">Update MFA</button>
+        <button onclick="CancelMFA()">Cancel</button>
+    </div>
+</div>

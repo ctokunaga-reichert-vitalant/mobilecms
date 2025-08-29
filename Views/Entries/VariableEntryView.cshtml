@@ -1,0 +1,38 @@
+﻿@model Mobile_CMS.Models.VariablesModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing Variable Entry";
+}
+
+<div>
+    <h2>Variable</h2>
+    <div>
+        <h3>Preview</h3>
+        <img id="imgVariablePreview" />
+    </div>
+    <div>
+        <h3>Details</h3>
+        <div>
+            <label>Title</label>
+            <input id="variableTitle" type="text"/>
+        </div>
+        <div>
+            <label>Description</label>
+            <input id="variableDescription" type="text" />
+        </div>
+        <div>
+            <label>Section</label>
+            <select id="variableSection" />
+        </div>
+        <div>
+            <label>Keyword</label>
+            <select id="variableKeyword" />
+        </div>
+        <input type="checkbox" id="variableActive" />
+        <label for="variableActive">Active</label>
+    </div>
+    <div>
+        <button onclick="SubmitVariable()" id="btnSubmitVariable" />
+        <button onclick="CancelVariable()">Cancel</button>
+    </div>
+</div>

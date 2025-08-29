@@ -1,0 +1,30 @@
+﻿@model Mobile_CMS.Models.KeywordsModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing Keyword Entry";
+}
+
+<div>
+    <h2>Keyword</h2>
+    <div>
+        <h3>Details</h3>
+        <div>
+            <label>Name</label>
+            <input id="keywordName" type="text" />
+        </div>
+        <div>
+            <label>Description</label>
+            <textarea rows="5" id="keywordDescription" />
+        </div>
+        <div>
+            <label>Section</label>
+            <select id="keywordSection" />
+        </div>
+        <input type="checkbox" id="keywordActive" />
+        <label for="keywordActive">Active</label>
+    </div>
+    <div>
+        <button onclick="SubmitKeyword()" id="btnSubmitKeyword" />
+        <button onclick="CancelKeyword()">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,125 @@
+﻿@model Mobile_CMS.Models.ImagesModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing Image Entry";
+}
+
+<div>
+    <h2>Image</h2>
+    <div>
+        <h3>Details</h3>
+        <div>
+            <div>
+                <label>Title</label>
+                <input type="text" id="imageTitle" />
+            </div>
+            <div>
+                <label>Publish From</label>
+                <input type="date" id="imagePublishFrom" />
+                <label>Publish To</label>
+                <input type="date" id="imagePublishTo" />
+            </div>
+            <div>
+                <label>Action</label>
+                <textarea rows="5" id="imageAction" />
+            </div>
+            <div>
+                <input type="checkbox" id="contentActive" />
+                <label for="contentActive">Active</label>
+            </div>
+            <div>
+                <input type="checkbox" id="contentConditions" />
+                <label for="contentConditions">Conditions</label>
+            </div>
+        </div>
+        <h3>Filter by Donation Details</h3>
+        <div>
+            <label>Blood Type</label>
+            <select id="imageBloodType" multiple>
+                <option value="0">A+</option>
+                <option value="1">A-</option>
+                <option value="2">B+</option>
+                <option value="3">B-</option>
+                <option value="4">AB+</option>
+                <option value="5">AB-</option>
+                <option value="6">O+</option>
+                <option value="7">O-</option>
+            </select>
+        </div>
+        <div>
+            <label>Donation Type</label>
+            <select id="imageDonationType" multiple>
+                <option value="0">Whole Blood</option>
+                <option value="1">Power Red</option>
+                <option value="2">Platelet</option>
+                <option value="3">Plasma</option>
+                <option value="4">Source Plasma</option>
+            </select>
+        </div>
+        <div>
+            <label>Donor Status</label>
+            <select id="imageDonorStatus" multiple>
+                <option value="0">Active</option>
+                <option value="1">Inactive</option>
+                <option value="2">Prospect</option>
+                <option value="3">Lapsed</option>
+                <option value="4">Super Lapsed</option>
+            </select>
+        </div>
+        <h3>Filter By Donation Timeline</h3>
+        <div>
+            <fieldset>
+                <div>
+                    <input type="radio" id="imageBeforeDate" name="donationDate" value="0" />
+                    <label for="imageBeforeDate">Before</label>
+                </div>
+                <div>
+                    <input type="radio" id="imageBetweenDate" name="donationDate" value="1" />
+                    <label for="imageBetweenDate">Between</label>
+                </div>
+                <div>
+                    <input type="radio" id="imageAfterDate" name="donationDate" value="2" />
+                    <label for="imageAfterDate">After</label>
+                </div>
+            </fieldset>
+            <div>
+                <input type="date" id="imageDate1" />
+                <label id="lblDate1" for="imageDate1" />
+            </div>
+            <div>
+                <input type="date" id="imageDate2" />
+                <label id="lblDate2" for="imageDate2" />
+            </div>
+        </div>
+        <h3>Filter by Location</h3>
+        <div>
+            <label>State</label>
+            <select id="imageStates" multiple />
+        </div>
+        <div>
+            <label>Zip Code</label>
+            <input id="imageZipCodes" type="text" />
+        </div>
+    </div>
+    <div>
+        <h3>Image</h3>
+        <div>
+            <div>
+                <label id="lblImageStatus" />
+                <img id="imgImagePic" />
+                <button onclick="RemoveImage()">Remove</button>
+            </div>
+            <div>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label for="imageFile">Choose File:</label>
+                    <input type="file" id="imageFile" name="uploadedFile" accept=".jpg, .png" />
+                    <input type="submit" value="submit" id="submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="SubmitImage()" id="btnSubmitImage" />
+        <button onclick="CancelImage()">Cancel</button>
+    </div>
+</div>

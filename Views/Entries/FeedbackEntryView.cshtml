@@ -1,0 +1,28 @@
+﻿@model Mobile_CMS.Models.FeedbackModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing Feedback Entry";
+}
+
+<div>
+    <h2>Feedback</h2>
+    <div>
+        <h3>Details</h3>
+        <div>
+            <label>Email</label>
+            <input id="feedbackEmail" type="text" readonly />
+        </div>
+        <div>
+            <label>Donor ID</label>
+            <input id="feedbackDonorID" type="text" readonly />
+        </div>
+        <div>
+            <label>Feedback</label>
+            <textarea rows="5" id="feedbackContent" readonly />
+        </div>
+    </div>
+    <div>
+        <button onclick="ForwardFeedback()" id="btnForwardFeedback" />
+        <button onclick="BackToDashboard()">Back</button>
+    </div>
+</div>

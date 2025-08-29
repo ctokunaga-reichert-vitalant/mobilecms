@@ -1,0 +1,45 @@
+﻿@model Mobile_CMS.Models.TestimonialsModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing Testimonial Entry";
+}
+
+<div>
+    <h2>Testimonial</h2>
+    <div>
+        <h3>Details</h3>
+        <div>
+            <label>Name</label>
+            <input id="testimonialName" type="text" />
+        </div>
+        <div>
+            <label>Content</label>
+            <textarea rows="5" id="testimonialContent" />
+        </div>
+        <div>
+            <input type="checkbox" id="testimonialActive" />
+            <label for="testimonialActive">Active</label>
+        </div>
+    </div>
+    <div>
+        <h3>Photo</h3>
+        <div>
+            <div>
+                <label id="lblTestimonialStatus" />
+                <img id="imgTestimonialPic" />
+                <button onclick="RemoveImage()">Remove</button>
+            </div>
+            <div>
+                <form action="#" method="post" enctype="multipart/form-data">
+                    <label for="testimonialFile">Choose File:</label>
+                    <input type="file" id="testimonialFile" name="uploadedFile" accept=".jpg, .png" />
+                    <input type="submit" value="submit" id="submit" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="SubmitTestimonial()" id="btnSubmitTestimonial" />
+        <button onclick="CancelTestimonial()">Cancel</button>
+    </div>
+</div>

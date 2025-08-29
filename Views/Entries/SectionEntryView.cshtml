@@ -1,0 +1,26 @@
+﻿@model Mobile_CMS.Models.SectionsModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing Section Entry";
+}
+
+<div>
+    <h2>Section</h2>
+    <div>
+        <h3>Details</h3>
+        <div>
+            <label>Name</label>
+            <input id="sectionName" type="text" />
+        </div>
+        <div>
+            <label>Description</label>
+            <textarea rows="5" id="sectionDescription" />
+        </div>
+        <input type="checkbox" id="sectionActive" />
+        <label for="sectionActive">Active</label>
+    </div>
+    <div>
+        <button onclick="SubmitSection()" id="btnSubmitSection" />
+        <button onclick="CancelSection()">Cancel</button>
+    </div>
+</div>

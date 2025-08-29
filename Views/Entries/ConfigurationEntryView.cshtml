@@ -1,0 +1,33 @@
+﻿@model Mobile_CMS.Models.ConfigurationModel
+
+@{
+    ViewData["Title"] = "Mobile App Marketing Configuration Entry";
+}
+
+<div>
+    <h2>Configuration</h2>
+    <div>
+        <h3>Details</h3>
+        <div>
+            <label for="configName">Name</label>
+            <input id="configName" type="text" />
+            <label for="configType">Type</label>
+            <select id="configType">
+                <option value="0">Integer</option>
+                <option value="1">String</option>
+                <option value="2">Boolean</option>
+                <option value="3">Datetime</option>
+            </select>
+            <label for="configValue">Value</label>
+            <input id="configValue" />
+        </div>
+        <div>
+            <input type="checkbox" id="configActive" />
+            <label for="configActive">Active</label>
+        </div>
+        <div>
+            <button onclick="SubmitConfiguration()" id="btnSubmitConfiguration" />
+            <button onclick="CancelConfiguration()">Cancel</button>
+        </div>
+    </div>
+</div>
