@@ -1,5 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Mobile_CMS.Models.ImagesModel>
+
 @{
+    ViewData["Title"] = "Mobile App Marketing Images";
 }
+
+<div>
+    <div>
+        <h3>Marketing Images</h3> @*Looking to display the count of the data displayed*@
+        <div>
+            <select id="imageActiveStatus">
+                <option value="0">All</option>
+                <option value="1">Active</option>
+                <option value="2">Inactive</option>
+            </select>
+        </div>
+        <div>
+            <button onclick="NewImage()">New Image</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>Title</th>
+                    <th>Publish From</th>
+                    <th>PUblish To</th>
+                    <th>Active</th>
+                </tr>
+            </thead>
+            <tbody id="imagesBody"></tbody>
+        </table>
+    </div>
+</div>

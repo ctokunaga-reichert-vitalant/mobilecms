@@ -1,5 +1,30 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Mobile_CMS.Models.VariablesModel>
+
 @{
+    ViewData["Title"] = "Mobile App Marketing Variables";
 }
+
+<div>
+    <div>
+        <h3>Variables</h3> @*Looking to display the count of the data displayed*@
+        <div>
+            <select id="variablesSection"></select>
+        </div>
+        <div>
+            <button onclick="NewVariable()">New Variable</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Section</th>
+                    <th>Keyword</th>
+                    <th>Active</th>
+                </tr>
+            </thead>
+            <tbody id="variablesBody"></tbody>
+        </table>
+    </div>
+</div>

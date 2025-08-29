@@ -1,5 +1,31 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<Mobile_CMS.Models.FeedbackModel>
+
 @{
+    ViewData["Title"] = "Mobile App Feedback";
 }
+
+<div>
+    <div>
+        <h3>Mobile App Contact Us Feedback</h3> @*Looking to display the count of the data displayed*@
+        <div>
+            <select id="feedbackReviewStatus">
+                <option value="0">All</option>
+                <option value="1">Reviewed</option>
+                <option value="2">Unreviewed</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>Donor Name</th>
+                    <th>Email</th>
+                    <th>Donor ID</th>
+                    <th>Date Submitted</th>
+                    <th>Reviewed</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackBody"></tbody>
+        </table>
+    </div>
+</div>
