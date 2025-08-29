@@ -6,6 +6,5 @@
         public string? SectionName { get; set; }
         public string? SectionDescription { get; set; }
         public bool IsActive { get; set; }
-        public int DisplayOrder { get; set; }
     }
 }
